@@ -1,0 +1,27 @@
+{
+  "name": "require-gql",
+  "version": "1.0.0",
+  "description": "Allows you to require .gql files in Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben-bradley/require-gql.git"
+  },
+  "keywords": [
+    "gql",
+    "require"
+  ],
+  "author": "Ben Bradley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ben-bradley/require-gql/issues"
+  },
+  "homepage": "https://github.com/ben-bradley/require-gql#readme",
+  "dependencies": {
+    "graphql": "^15.4.0",
+    "graphql-tag": "^2.11.0"
+  }
+}
