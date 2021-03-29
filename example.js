@@ -2,6 +2,8 @@
 
 const { requireGql } = require('./');
 
-const typeDefs = requireGql('./schema/type-def.gql');
+const Book = requireGql('./schema/Book');
+const Query = requireGql('./schema/Query.gql');
 
-console.log(typeDefs);
+console.log('Book:', Book);
+console.log('Query:', Query);
