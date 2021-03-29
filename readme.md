@@ -8,6 +8,8 @@ This simple module allows you to "`require`" GQL files in Node.js in much the sa
 - v1.1.0
   - Allow specifying GQL path relative to requiring (parent) module
   - Allow for omitting `.gql` extension in path argument
+- v1.1.1
+  - Fix module caching bug
 
 ## Example
 
