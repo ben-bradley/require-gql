@@ -12,6 +12,8 @@ This simple module allows you to "`require`" GQL files in Node.js in much the sa
   - Fix module caching bug
 - v1.1.2
   - Improved detection of requiring module ([hat-tip](https://github.com/felixge/node-stack-trace/blob/master/lib/stack-trace.js))
+- v2.0.0
+  - Align with path reference patters for standard JS modules
 
 ## Example
 

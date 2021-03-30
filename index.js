@@ -1,4 +1,4 @@
-const fs = require('fs');
+const { readFileSync } = require('fs');
 const gql = require('graphql-tag');
 const { dirname, resolve } = require('path');
 
@@ -32,26 +32,12 @@ const getRequirer = (fn) => {
   return stack[0];
 }
 
-const pathExists = (path) => {
-  try {
-    fs.accessSync(path);
-    return path;
-  } catch (e) {
-    return false;
-  }
-}
-
 const requireGql = (path) => {
   const requirer = getRequirer(requireGql);
   const pathWithGql = (/\.gql$/.test(path)) ? path : `${path}.gql`;
-  const paths = [
-    pathWithGql,
-    resolve(dirname(requirer), pathWithGql)
-  ];
+  const resolvedPathWithGql = resolve(dirname(requirer), pathWithGql);
 
-  const validPath = paths.find((p) => pathExists(p));
-
-  return gql(fs.readFileSync(validPath, 'utf8'));
+  return gql(readFileSync(resolvedPathWithGql, 'utf8'));
 }
 
 module.exports = {
